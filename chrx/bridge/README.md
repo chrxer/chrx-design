@@ -1,0 +1,1 @@
+The bridge from C++ to Rust is implemented with [cxx](https://github.com/dtolnay/cxx) and [cxx_gen/](https://docs.rs/cxx-gen/latest/cxx_gen/).
