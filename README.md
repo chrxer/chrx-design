@@ -3,11 +3,7 @@ The design for [chrx](https://github.com/chrxer/chrx)
 
 ## Roadmap
 See [roadmap](/roadmap/README.md)
-
-## Extensions desgin
-See [extensions](/extensions/README.md)
-
-## Chrx
+## Chrx Concept
 See [chrx](/chrx/README.md)
 
 ## References

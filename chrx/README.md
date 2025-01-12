@@ -1,3 +1,10 @@
-## C++ Bridge
+## Architecture
+![bridge.png](bridge.drawio.svg)
 
-See [bridge](bridge/README.md)
+## `C++` <-> `Rust` Bridge
+
+See [bridge](bridge)
+
+## Server
+
+See [server](server)

@@ -1,15 +1,21 @@
 #[cxx::bridge]
-mod bridge {
-    struct Point {
-        x: i32,
-        y: i32,
+mod ffi {
+    unsafe extern "C++" {
+        include!("StartupData.hpp");
+
+        type StartupData;
+
+        fn get_str(&self) -> &CxxString;
+        fn get_channel(&self) -> &CxxString;
     }
 
     extern "Rust" {
-        fn print_point(p: Point);
+        fn on_startup(data: &StartupData);
     }
 }
 
-fn print_point(p: bridge::Point) {
-    println!("Point: ({}, {})", p.x, p.y);
+pub fn on_startup(data: &ffi::StartupData) {
+    let url = data.get_str().to_string();
+    let channel = data.get_channel().to_string();
+    println!("Got string: {}, channel: {} from Rust", url, channel);
 }

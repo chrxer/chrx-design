@@ -11,3 +11,6 @@ cxx-build = "1.0"
 
 [lib]
 crate-type = ["dylib"]
+
+[build]
+build = "build.rs"

@@ -1,29 +1,21 @@
 #include <iostream>
-#include <dlfcn.h>
-#include <unistd.h>
-#include <cstring>
-#include <cstdlib>
-#include <climits>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-
-#include "chrx/src/lib.rs.h"
-#include "chrx/src/lib.rs.cc"
-
+#include "StartupData.hpp"
 #include "utils.cpp"
+#include "lib.rs.h"
+#include "lib.rs.cc"
+
+std::string const& StartupData::get_str() const {
+    static std::string hello = "Hello World!";
+    return hello;
+}
 
 int main(int argc, char* argv[]) {
-    // Setup the library (load and resolve paths)
     setupLibrary(argc, argv);
 
-    // Create a Point struct
-    Point point;
-    point.x = 10;
-    point.y = 20;
+    StartupData data("testchannel://localhost:999");
+    on_startup(data);
 
-    // Call the Rust function with the struct
-    print_point(point);
+    std::cout << "Called on_startup from cpp\n";
 
     return 0;
 }
