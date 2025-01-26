@@ -1,2 +1,3 @@
-- [x] POC for the [bridge](https://github.com/chrxer/chrx-design/tree/main/chrx/bridge)
-- [ ] POC for bridge with Chromium, dynamic [`GetVersionNumber`](https://source.chromium.org/chromium/chromium/src/+/main:base/version_info/version_info.h;l=29;drc=fcb6a4d3b7edba6596ac7668ab719d2892222a2e;bpv=0;bpt=1)
+- [x] ~~POC for the [bridge](https://github.com/chrxer/chrx-design/tree/main/chrx/bridge)~~
+- [ ] *refactor* architecture (no C++ - Rust bridge)
+- [ ] POC for server with Chromium, dynamic [`GetVersionNumber`](https://source.chromium.org/chromium/chromium/src/+/main:base/version_info/version_info.h;l=29;drc=fcb6a4d3b7edba6596ac7668ab719d2892222a2e;bpv=0;bpt=1) & use of [Cap'n Proto](https://github.com/capnproto/capnproto-rust/tree/master)
