@@ -1,10 +1,9 @@
 ## Architecture
 ![bridge.png](bridge.drawio.svg)
 
-## `C++` <-> `Rust` Bridge
-
+## `C++` <-> `Server` bridge (aka `libchrx.so`)
 See [bridge](bridge)
 
 ## Server
-
+Written in Rust
 See [server](server)
