@@ -1,5 +1,4 @@
-The  `C++` <-> `Rust` bridge (`libchrx.so`) is implemented with [cxx](https://github.com/dtolnay/cxx) and [cxx_gen](https://docs.rs/cxx-gen/latest/cxx_gen/).
-
+The  `libchrx.so` is built as a [chromium component](https://chromium.googlesource.com/chromium/src/+/HEAD/docs/component_build.md) and communicates with the server based on [Cap'n Proto](https://github.com/capnproto/capnproto-rust/tree/master) over the port `back-chn`.
 ## Concept
 Bridge can be compiled seperatly from Chromium, allowing
 1. Integration of updates
@@ -7,5 +6,5 @@ Bridge can be compiled seperatly from Chromium, allowing
 4. Shorter (developer-friendlier) compillation times
 5. Faster communication between the browser and bridge
 
-## POC
-A proof of Concept for the `C++` <-> `Rust` bridge can be found in [POC](POC)
+## API
+TBD

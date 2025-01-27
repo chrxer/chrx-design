@@ -1,7 +1,0 @@
-out
-build
-cppbuild
-CMakeFiles
-CMakeCache.txt
-
-cmake_install.cmake
